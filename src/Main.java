@@ -19,5 +19,10 @@ public class Main {
         settings.invertWifiStatus(true);
         boolean wifiStatus = settings.getWifiStatus();
         System.out.println(wifiStatus);
+
+        //what if we tried to create another instance? It returns the same properties
+        IPhoneSettings settings2 = IPhoneSettings.getInstance();
+        System.out.println(settings2.getVolume());
+
     }
 }
